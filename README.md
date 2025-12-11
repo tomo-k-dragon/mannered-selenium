@@ -26,7 +26,8 @@ pip install git+https://github.com/tomo-k-dragon/mannered-selenium.git
 ---
 ## Usage
 ```python
-from mannered_selenium import ManneredDriver, AgentConfig
+from mannered_selenium.driver_wrapper import ManneredDriver
+from mannered_selenium.agent_config import AgentConfig
 
 # set agent info.
 config = AgentConfig(name="mybot", version="1.0", email="mybot@example.com")
