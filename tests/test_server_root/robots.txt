@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /global-disallowed.html
+Allow: /allowed.html
+Crawl-delay: 2
+
+User-agent: DisallowedBot
+Disallow: /disallowed.html
+Crawl-delay: 3
