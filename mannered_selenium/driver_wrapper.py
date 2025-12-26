@@ -6,7 +6,7 @@ from typing import Optional
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service
 
-class ManneredDriver:
+class ManneredDriver():
     config = None
     def __init__(
             self, 
@@ -42,6 +42,9 @@ class ManneredDriver:
 
 
     def get(self, url: str):
+        """ Navigate the browser to the specified URL in the current window or
+        tab. Before navigating check if it is allowed and applies a delay execution based on the robots.txt of specified URL."""
+
         # if not allowed, raise RobotsDeniedError from method.
         self.robots.ensure_allowed(url, user_agent=self.config.name)
 

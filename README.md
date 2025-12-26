@@ -28,12 +28,13 @@ pip install git+https://github.com/tomo-k-dragon/mannered-selenium.git
 ```python
 from mannered_selenium.driver_wrapper import ManneredDriver
 from mannered_selenium.agent_config import AgentConfig
+from mannered_selenium.protocol import WebDriverLike
 
 # set agent info.
 config = AgentConfig(name="mybot", version="1.0", email="mybot@example.com")
 
 # create driver.
-driver = ManneredDriver(config=config, default_delay=2)
+driver: WebDriverLike = ManneredDriver(config=config, default_delay=2)
 
 # access with automatically check based on robots.txt.
 driver.get("https://example.com")
